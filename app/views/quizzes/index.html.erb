@@ -1,0 +1,33 @@
+<div class='container'>
+  <div class = 'box col-xs-offset-2 col-xs-8 text-center'>
+    <h1>I keep forgetting about these tests, Matt!</h1>
+    <h3>Now, do we have anything in common?</h3>
+    <%= simple_form_for Quiz.new do |f| %>
+    <h3>What is your favorite sport?</h3>
+    <%= f.input :sport, label: false, required: false %>
+    <br />
+    <%= f.submit 'Submit', :class => "btn btn-success" %>
+    <% end %>
+  </div>
+
+<!-- Displays how many things we have in common -->
+  <div class = 'box col-xs-offset-2 col-xs-8 answer-box text-center'>
+    <% common = [] %>
+    <% @quizzes.each do |quiz| %>
+      <% if quiz.common %>
+        <% common << quiz.sport %>
+      <% end %>
+    <% end %>
+    <h4>Cool, so far it looks like we have <i><strong><u><%= common.count %></u></strong></i> things in common!</h4>
+  </div>
+
+<!-- Displays all of the sports that have been entered -->
+  <div class = 'box col-xs-offset-2 col-xs-8 answer-box'>
+    <h3 class = 'text-center'>These are the sports you like:</h3>
+    <ul>
+      <% @quizzes.each do |quiz| %>
+        <li><%= quiz.sport %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

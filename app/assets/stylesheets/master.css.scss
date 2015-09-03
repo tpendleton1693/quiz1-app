@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:700);
+
+.box {
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0,0,0,.6);
+  padding: 10px;
+  font-family: sans-serif;
+  border-radius: 3px;
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2em;
+  padding-top: 17px;
+
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.answer-box {
+  margin-top: 10px;
+}
+
+.clear {
+  clear: both;
+}

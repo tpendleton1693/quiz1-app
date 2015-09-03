@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quiz1App</title>
+  <title>Matt's Quizzes</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name='viewport' content='width=device-width', initial-scale=1.0 />
 </head>
 <body>
+<nav class = 'navbar navbar-inverse'>
+  <div class = 'container-fluid'>
+    <div class = 'navbar-header'>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Matt's Quizzes", root_path, :class => 'navbar-brand' %>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 
